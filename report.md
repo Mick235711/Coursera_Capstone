@@ -99,3 +99,17 @@ Together, we have 10 independent inputs and 1 target parameter (severity). The v
 
 We can then use machine learning models to perform the prediction.
 
+## Methodology
+To obtain a single target variable, we need to first combine the 6 different metrics in original data. To do this, we need to uniformize the data such as person count 
+so that they don't contain too high data (like 81). We use the `get_replace_dict` utility function to split the data based on its value (0-2 to 0, 3-5 to 1, etc.). 
+The output of the function is a replace dict that can be directly passed to the `pandas.replace` function. Using similar techniques we can preprocess other four metrics.
+
+The `ST_COLCODE` metric is different. It represents a special code determined by the state, and higher code does not necessarily means higher severity. After studying the code 
+chart (in `Metadata.pdf`) carefully, we decide that this code is more representing the way of collision (like the direction of hitting vehicle), and does not have a high association 
+with the severity. Therefore, we decide to not use this data.
+
+We can then simply sum up the remaining 5 data to gain a single target variable - the severity of the accident, ranging from 0 to 7. See the plot below for a severity value ranging chart:
+![Severity Value Bar Chart](https://github.com/Mick235711/Coursera_Capstone/blob/main/severity_value_count.png)
+
+
+
