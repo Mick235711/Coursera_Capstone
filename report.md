@@ -141,3 +141,24 @@ In analyzing the accident data, we can first observe the overall accident status
 
 ![Accident Data Bar Chart](https://github.com/Mick235711/Coursera_Capstone/blob/main/images/accident_years.png)
 
+The chart had shown a gradually decreasing trend in accident numbers, showing that the government had been progressing in decrease accident values. This also illustrate the importance of the model, as it will 
+help the government to reduct accident more quickly.
+
+Now dive into data, we can plot the infection to prediction probability for different variables:
+
+![Probability Chart](https://github.com/Mick235711/Coursera_Capstone/blob/main/images/prob_line.png)
+
+It's easy to see that variable 4 (Weather) have the most effect on the prediction probability.
+
+## Discussion
+We see that the most important factor that contributes to the accident is the weather, so we suggest that the government should setting up reminders or signs on roads that may generate fogs or snows, to 
+remind people to drive more carefully in these roads.
+
+A more interesting observation (from the first image) is that accident with severity 1 is the most common. From examining the data generation process, we discover that the reason of this 
+is likely because of person count, as person that involved in an accident is likely to not be very small.
+
+## Conclusion
+In this project, we used the random forest model to evaluate, train and predict the accident severity rate from the Seattle accident data. The random forest model is superior and applicable 
+to this project because of its immunity to imbalanced data and target set and its stability to errors in data (compared to single decision trees). In the end, we produced a model with high accuracy, 
+and can be put into actual use by presenting the government with several useful tips to help reducing accident rate in Seattle and other main cities.
+
