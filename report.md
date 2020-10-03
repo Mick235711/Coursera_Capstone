@@ -109,7 +109,7 @@ chart (in `Metadata.pdf`) carefully, we decide that this code is more representi
 with the severity. Therefore, we decide to not use this data.
 
 We can then simply sum up the remaining 5 data to gain a single target variable - the severity of the accident, ranging from 0 to 7. See the plot below for a severity value ranging chart:
-![Severity Value Bar Chart](https://github.com/Mick235711/Coursera_Capstone/blob/main/severity_value_count.png)
+![Severity Value Bar Chart](https://github.com/Mick235711/Coursera_Capstone/blob/main/images/severity_array_value.png)
 
 
 
