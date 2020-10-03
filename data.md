@@ -4,9 +4,9 @@ This data contains the detailed traffic accident record in the time period 2004-
 
 The example of a data:
 
+| Index          | Value                                                  |
 |----------------|--------------------------------------------------------|
 | SEVERITYCODE   | 2                                                      |
-|----------------|--------------------------------------------------------|
 | X              | -122.32314840000002                                    |
 | Y              | 47.70314032                                            |
 | OBJECTID       | 1                                                      |
@@ -44,7 +44,6 @@ The example of a data:
 | SEGLANEKEY     | 0                                                      |
 | CROSSWALKKEY   | 0                                                      |
 | HITPARKEDCAR   | N                                                      |
-|----------------|--------------------------------------------------------|
 
 The usage of different parameters are as follows:
 (Full description is in [Metadata.pdf](https://github.com/Mick235711/Coursera_Capstone/blob/main/Metadata.pdf)).
