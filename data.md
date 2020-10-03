@@ -73,5 +73,5 @@ The usage of different parameters are as follows:
 - `SPEEDING` (Y/N): NaN = No, then change to 0-1
 - `HITPARKEDCAR` (Y/N): Change to 0-1
 
-Together, we have 10 independent inputs and 1 target parameter (sevirity). We can then use machine learning models to perform the prediction.
+Together, we have 10 independent inputs and 1 target parameter (severity). We can then use machine learning models to perform the prediction.
 
