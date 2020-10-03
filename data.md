@@ -1,8 +1,9 @@
 # Data
 The data that will be used to predict severity level and train the model is the shared data fetched from GISWeb and Seattle government. 
-This data contains the detailed traffic accident record in the time period 2004-present and is renewed weekly. The data contains various useful index for our project:
-(Full description is in [Metadata.pdf](https://github.com/Mick235711/Coursera_Capstone/blob/main/Metadata.pdf)).
+This data contains the detailed traffic accident record in the time period 2004-present and is renewed weekly.
+
 The example of a data:
+
 |----------------|--------------------------------------------------------|
 | SEVERITYCODE   | 2                                                      |
 | X              | -122.32314840000002                                    |
@@ -42,8 +43,10 @@ The example of a data:
 | SEGLANEKEY     | 0                                                      |
 | CROSSWALKKEY   | 0                                                      |
 | HITPARKEDCAR   | N                                                      |
+|----------------|--------------------------------------------------------|
 
 The usage of different parameters are as follows:
+(Full description is in [Metadata.pdf](https://github.com/Mick235711/Coursera_Capstone/blob/main/Metadata.pdf)).
 - `SEVERITYCODE` (1 or 2), `PERSONCOUNT` (0-81), `PEDCOUNT` (0-6), `PEDCYLCOUNT` (0-2), `VEHCOUNT` (0-12), `ST_COLCODE` (0-84): 
   These parameters describe the severity of the accident. We can uniformalize the severity of an accident by combining all these parameters. 
 - `COLLISIONTYPE` (10 different types): Can be changed to values of 0-9 for effective predicting
