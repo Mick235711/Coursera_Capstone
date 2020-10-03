@@ -2,7 +2,7 @@
 The data that will be used to predict severity level and train the model is the shared data fetched from GISWeb and Seattle government. 
 This data contains the detailed traffic accident record in the time period 2004-present and is renewed weekly.
 
-The example of a data:
+There are a total of 194673 accidents recorded, each record contains 38 different properties. The example of a data:
 
 | Index          | Value                                                  |
 |----------------|--------------------------------------------------------|
