@@ -109,7 +109,35 @@ chart (in `Metadata.pdf`) carefully, we decide that this code is more representi
 with the severity. Therefore, we decide to not use this data.
 
 We can then simply sum up the remaining 5 data to gain a single target variable - the severity of the accident, ranging from 0 to 7. See the plot below for a severity value ranging chart:
+
 ![Severity Value Bar Chart](https://github.com/Mick235711/Coursera_Capstone/blob/main/images/severity_array_value.png)
 
+We can obviously sees that the data set is imbalanced, as the accident that have a severity value of 0 is much higher than other accidents. However, we can use 
+a tree-based machine learning model to bypass the balance process, as tree-based models will reflect the small changes in the target variable quickly and accurately. 
 
+For the other values, we also need to preprocess (such as changing `NaN` to `0`). See the [notebook](https://github.com/Mick235711/Coursera_Capstone/blob/main/report.ipynb) for details.
+
+The value `INCDATE` and `INCDTTM` that records the date and time for the accident need special note. Since `INCDTTM` contains all the dates too, we can focus on this and 
+convert it to datetime format in Python. Even though the time is not used in the prediction model, we still need it later to establish the result section, in which we will analyze 
+the accident rate in each year.
+
+The first five rows of target set after all processing is as follows:
+
+|    |   SEVERITY |   COLLISIONTYPE |   JUNCTIONTYPE |   INATTENTIONIND |   UNDERINFL |   WEATHER |   ROADCOND |   LIGHTCOND |   PEDROWNOTGRNT |   SPEEDING |   HITPARKEDCAR |
+|----|------------|-----------------|----------------|------------------|-------------|-----------|------------|-------------|-----------------|------------|----------------|
+|  0 |          1 |               1 |              1 |                0 |           0 |         0 |          1 |           0 |               0 |          0 |              0 |
+|  1 |          1 |               4 |              0 |                0 |           0 |         1 |          1 |           1 |               0 |          0 |              0 |
+|  2 |          4 |               0 |              0 |                0 |           0 |         0 |          0 |           0 |               0 |          0 |              0 |
+|  3 |          3 |               3 |              0 |                0 |           0 |         0 |          0 |           0 |               0 |          0 |              0 |
+|  4 |          1 |               1 |              1 |                0 |           0 |         1 |          1 |           0 |               0 |          0 |              0 |
+
+Once we done all the processing, we can fetch the 10 independent inputs and 1 target parameter into two seperate array, and then split them into target set and test set (with ratio = 0.75). 
+Then, we use random forest model to train the value, and obtain the final model result by calculating the fit `R^2` score and cross-validate the value.
+
+## Results
+The model prediction result shows an average of approximately 65.34% accuracy (`R^2` score) and 65.35% cross-validation score, suggesting that the model is useable (as the target variable is not binarized).
+
+In analyzing the accident data, we can first observe the overall accident status by examine the accident count in each year. The resulting bar chart is as follows:
+
+![Accident Data Bar Chart](https://github.com/Mick235711/Coursera_Capstone/blob/main/images/accident_years.png)
 
